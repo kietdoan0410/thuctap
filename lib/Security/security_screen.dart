@@ -24,6 +24,7 @@ class _SecurityScreenState extends State<SecurityScreen> {
     return Scaffold(
       backgroundColor: Colors.grey[200],
       appBar: AppBar(
+        title: Text('Bảo Mật'),
         leading: GestureDetector(
             onTap: () => Navigator.push(
                   context,

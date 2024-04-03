@@ -48,6 +48,7 @@ class _SupportScreenState extends State<SupportScreen> {
                     width: 10,
                   ),
                   Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         'Số điện thoại',
@@ -100,6 +101,7 @@ class _SupportScreenState extends State<SupportScreen> {
                     width: 10,
                   ),
                   Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         'Email',
@@ -152,6 +154,7 @@ class _SupportScreenState extends State<SupportScreen> {
                     width: 10,
                   ),
                   Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         'Trang web',

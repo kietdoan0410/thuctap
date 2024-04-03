@@ -4,6 +4,7 @@ import 'package:kiet_first_app/Account/account_screen.dart';
 import 'package:kiet_first_app/support/support_screen.dart';
 import 'package:kiet_first_app/Security/security_screen.dart';
 import 'package:kiet_first_app/Scroll/scroll_screen.dart';
+import 'package:kiet_first_app/Signup/signup_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +20,6 @@ class MyApp extends StatelessWidget {
       title: 'cài đặt',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.yellow),
         useMaterial3: true,
       ),
@@ -63,7 +63,6 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       backgroundColor: Colors.grey[200],
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
@@ -92,6 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       width: 15,
                     ),
                     Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           'Elena Nguyen',
@@ -112,9 +112,10 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     Spacer(),
                     GestureDetector(
-                      onTap: () =>  Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const AccountScreen()),
+                      onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const AccountScreen()),
                       ),
                       child: Icon(
                         Icons.arrow_forward_ios,
@@ -157,9 +158,10 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ),
                     GestureDetector(
-                      onTap: () =>  Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const ScrollScreen()),
+                      onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ScrollScreen()),
                       ),
                       child: Icon(
                         Icons.arrow_forward_ios,
@@ -202,9 +204,10 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ),
                     GestureDetector(
-                      onTap: () =>  Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const LanguageScreen()),
+                      onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const LanguageScreen()),
                       ),
                       child: Icon(
                         Icons.arrow_forward_ios,
@@ -246,9 +249,10 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ),
                     GestureDetector(
-                      onTap: () =>  Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const SecurityScreen()),
+                      onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const SecurityScreen()),
                       ),
                       child: Icon(
                         Icons.arrow_forward_ios,
@@ -290,9 +294,10 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ),
                     GestureDetector(
-                      onTap: () =>  Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const SupportScreen()),
+                      onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const SupportScreen()),
                       ),
                       child: Icon(
                         Icons.arrow_forward_ios,
@@ -340,6 +345,51 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               SizedBox(
+                height: 5,
+              ),
+              Container(
+                padding: EdgeInsets.all(15),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                ),
+                child: Row(
+                  children: [
+                    Container(
+                        padding: EdgeInsets.all(5),
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.blue[800],
+                        ),
+                        child: Icon(
+                          Icons.edit_attributes,
+                          color: Colors.white,
+                        )),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Expanded(
+                      child: Text(
+                        'Đăng Ký',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 20,
+                        ),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const SignUpScreen()),
+                      ),
+                      child: Icon(
+                        Icons.arrow_forward_ios,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
                 height: 20,
               ),
               SizedBox(
@@ -364,10 +414,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     ],
                   ),
                   style: ElevatedButton.styleFrom(
-                      shape: StadiumBorder(),
-                      backgroundColor: Colors.yellow,
-                      
-                ),
+                    shape: StadiumBorder(),
+                    backgroundColor: Colors.yellow,
+                  ),
                 ),
               ),
             ],

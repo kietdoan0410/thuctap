@@ -22,6 +22,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
     return Scaffold(
       backgroundColor: Colors.grey[200],
       appBar: AppBar(
+        title: Text('Ngôn Ngữ'),
         leading: GestureDetector(
             onTap: () => Navigator.push(
                   context,
