@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:kiet_first_app/Home/home_screen.dart';
+import 'package:kiet_first_app/Profile/profile_screen.dart';
+import 'package:kiet_first_app/block/block_screen.dart';
 import 'package:kiet_first_app/language/language_screen.dart';
 import 'package:kiet_first_app/Account/account_screen.dart';
 import 'package:kiet_first_app/support/support_screen.dart';
@@ -338,8 +341,15 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                       ),
                     ),
-                    Icon(
-                      Icons.arrow_forward_ios,
+                    GestureDetector(
+                      onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const BlockScreen()),
+                      ),
+                      child: Icon(
+                        Icons.arrow_forward_ios,
+                      ),
                     ),
                   ],
                 ),
@@ -381,6 +391,98 @@ class _MyHomePageState extends State<MyHomePage> {
                         context,
                         MaterialPageRoute(
                             builder: (context) => const SignUpScreen()),
+                      ),
+                      child: Icon(
+                        Icons.arrow_forward_ios,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              Container(
+                padding: EdgeInsets.all(15),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                ),
+                child: 
+                Row(
+                  children: [
+                    Container(
+                        padding: EdgeInsets.all(5),
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.blue[800],
+                        ),
+                        child: Icon(
+                          Icons.home,
+                          color: Colors.white,
+                        )),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Expanded(
+                      child: Text(
+                        'Trang chủ',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 20,
+                        ),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const HomeScreen()),
+                      ),
+                      child: Icon(
+                        Icons.arrow_forward_ios,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 5,
+              ),
+              Container(
+                padding: EdgeInsets.all(15),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                ),
+                child: 
+                Row(
+                  children: [
+                    Container(
+                        padding: EdgeInsets.all(5),
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.blue[800],
+                        ),
+                        child: Icon(
+                          Icons.account_balance,
+                          color: Colors.white,
+                        )),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Expanded(
+                      child: Text(
+                        'Tài khoản',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 20,
+                        ),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ProfileScreen()),
                       ),
                       child: Icon(
                         Icons.arrow_forward_ios,

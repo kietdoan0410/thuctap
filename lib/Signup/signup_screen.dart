@@ -27,10 +27,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
       appBar: AppBar(
         title: Text('Đăng Ký'),
         leading: GestureDetector(
-            onTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const MyApp()),
-                ),
+            onTap: () => Navigator.pop(context),
             child: Icon(Icons.arrow_back_ios)),
       ),
       body: Center(

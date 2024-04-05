@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kiet_first_app/main.dart';
+import 'package:kiet_first_app/Scroll/comment_screen.dart';
 
 class ScrollScreen extends StatefulWidget {
   const ScrollScreen({super.key});
@@ -33,14 +34,11 @@ class _ScrollScreenState extends State<ScrollScreen> {
     ];
 
     return Scaffold(
-      backgroundColor: Colors.grey[200],
+      backgroundColor: Colors.yellow[700],
       appBar: AppBar(
         title: Text('Scroll Screen'),
         leading: GestureDetector(
-          onTap: () => Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => const MyApp()),
-          ),
+          onTap: () => Navigator.pop(context),
           child: Icon(Icons.arrow_back_ios),
         ),
       ),
@@ -92,9 +90,17 @@ class _ScrollScreenState extends State<ScrollScreen> {
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                       border: Border.all(width: 1, color: Colors.white),
                     ),
-                    child: Icon(
+                    child: 
+                    GestureDetector(
+                      onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const CommentScreen()),
+                      ),
+                      child: Icon(
                       Icons.speaker_phone,
                       color: Colors.white,
+                    ),
                     ),
                   ),
                 ),

@@ -15,10 +15,7 @@ class _SupportScreenState extends State<SupportScreen> {
       backgroundColor: Colors.grey[200],
       appBar: AppBar(
         leading: GestureDetector(
-            onTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const MyApp()),
-                ),
+            onTap: () => Navigator.pop(context),
             child: Icon(Icons.arrow_back_ios)),
       
       ),

@@ -26,10 +26,7 @@ class _SecurityScreenState extends State<SecurityScreen> {
       appBar: AppBar(
         title: Text('Bảo Mật'),
         leading: GestureDetector(
-            onTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const MyApp()),
-                ),
+            onTap: () => Navigator.pop(context),
             child: Icon(Icons.arrow_back_ios)),
       ),
 

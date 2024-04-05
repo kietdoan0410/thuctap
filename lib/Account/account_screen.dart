@@ -22,10 +22,7 @@ class _AccountScreenState extends State<AccountScreen> {
       appBar: AppBar(
         title: Text('Tài Khoản'),
         leading: GestureDetector(
-            onTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const MyApp()),
-                ),
+            onTap: () => Navigator.pop(context),
             child: Icon(Icons.arrow_back_ios)),
       ),
       body: Padding(
